@@ -9,16 +9,16 @@
     http://www.springframework.org/schema/util/spring-util-4.0.xsd">
 	<bean id="shiroFilter" class="org.apache.shiro.spring.web.ShiroFilterFactoryBean">
 		<property name="securityManager" ref="securityManager" />
-		<property name="loginUrl" value="/login.jsp" />
+		<property name="loginUrl" value="/login/toLongin" />
 		<property name="successUrl" value="/login.jsp" />
 		<property name="unauthorizedUrl" value="/error/noperms.jsp" />
 		<property name="filterChainDefinitions">
 			<value>
-				/login.jsp* = anon
-				/login.do* = anon
+				/login* = anon
 				/createImageCode.do* = anon
-				/changePwd.do* = anon
-			    /images/** = anon
+				/index* = anon
+			    /css/**  = anon
+			    /js/**  = anon
 				/submit.do* = anon
 				/error/noperms.jsp*= anon
 				/*.jsp* = authc

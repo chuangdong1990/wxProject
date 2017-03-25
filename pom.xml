@@ -16,11 +16,27 @@
     </dependency>
     <!-- 1、servlet支持 -->
     <dependency>
+		<groupId>taglibs</groupId>
+		<artifactId>standard</artifactId>
+		<version>1.1.2</version>
+	</dependency>
+	<dependency>
     	<groupId>javax.servlet</groupId>
-    	<artifactId>servlet-api</artifactId>
-    	<version>2.5</version>
-    	<scope>provided</scope>
-    </dependency>
+	    <artifactId>jstl</artifactId>
+	    <version>1.2</version>
+	</dependency>
+	<dependency>
+		<groupId>javax.servlet</groupId>
+		<artifactId>javax.servlet-api</artifactId>
+		<version>3.1.0</version>
+		<scope>provided</scope>
+	</dependency>
+	<dependency>
+            <groupId>javax.servlet.jsp</groupId>
+            <artifactId>jsp-api</artifactId>
+            <version>2.1</version>
+            <scope>provided</scope>
+     </dependency>
     <!-- 2、Spring -->
     <dependency>
     	<groupId>org.springframework</groupId>
@@ -106,6 +122,11 @@
       <artifactId>shiro-spring</artifactId>    
       <version>1.2.2</version>    
     </dependency> 
+    <dependency>
+    	<groupId>org.apache.shiro</groupId>
+    	<artifactId>shiro-quartz</artifactId>
+    	<version>1.2.2</version>
+    </dependency>
 	
   </dependencies>
   <build>
@@ -117,6 +138,8 @@
         <version>2.2</version>
         <configuration>
           <port>9090</port>
+          <source>1.8</source>
+          <target>1.8</target>
         </configuration>
       </plugin>
     </plugins>
